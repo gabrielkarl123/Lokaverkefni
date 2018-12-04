@@ -1,0 +1,21 @@
+cd /
+mkdir DATA
+cd DATA
+mkdir Sameign && mkdir Forritun && mkdir Markadsmal
+chmod 1770 Sameign && chmod 1770 Forritun && chmod 1770 Markadsmal
+groupadd allir && groupadd sameign && groupadd forritun && groupadd markadsmal
+useradd -s /bin/bash -m g forritun,allir,markadsmal Áslaug Hauksdóttir
+useradd -s /bin/bash -m g forritun,allir Björn Jóhannsson
+useradd -s /bin/bash -m g forritun,allir Bryndís Samúelsdóttir
+useradd -s /bin/bash -m g forritun,allir Elín Sveinsdóttir
+useradd -s /bin/bash -m g forritun,allir Ellert Gestsson
+useradd -s /bin/bash -m g markadsmal,allir Elsa Jónsdóttir
+useradd -s /bin/bash -m g markadsmal,allir Erla Þorbjörnsdóttir
+useradd -s /bin/bash -m g markadsmal,allir Erlendur Jónsson 
+
+passwd -l Erlendur Jónsson 
+passwd -l Erla Þorbjörnsdóttir
+
+usermod -aG sudo Áslaug Hauksdóttir
+touch Read-Me-Aslaug
+echo "Hæ Áslaug ég er búinn að læsa aðgöngunum hjá Erlendi og Erlu til þess að aflæsa aðgangana þá þarft þú einfaldlega að gera #passwd -u (notandanafn)# og til að gera users þá þarftu einfaldlega að skrifa #useradd -s /bin/bash -m g (Nafn á hópi sem þú vilt bæta notandanum í) (Notandanafn)#" >Read-Me-Aslaug
