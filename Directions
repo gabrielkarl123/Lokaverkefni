@@ -4,7 +4,7 @@ cd DATA
 mkdir Sameign && mkdir Forritun && mkdir Markadsmal
 chmod 1770 Sameign && chmod 1770 Forritun && chmod 1770 Markadsmal
 groupadd allir && groupadd sameign && groupadd forritun && groupadd markadsmal
-useradd -s /bin/bash -m g forritun,allir,markadsmal Áslaug Hauksdóttir
+useradd -s /bin/bash -m -G forritun,allir,markadsmal -c "Áslaug Hauksdóttir" aslaug
 useradd -s /bin/bash -m g forritun,allir Björn Jóhannsson
 useradd -s /bin/bash -m g forritun,allir Bryndís Samúelsdóttir
 useradd -s /bin/bash -m g forritun,allir Elín Sveinsdóttir
